@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" > 
+<head> 
+<title>½ø¶ÈÌõ</title> 
+<style type="text/css"> 
+body{ background-color: #1e2420; }
+.graph{ width: 450px; border: 1px solid #C75211; height: 25px; } 
+#bar{ display: block; background: #e57233; float: left; height: 100%; text-align: center; font-family: Verdana; line-height: 25px; color: #FFF; } 
+</style> 
+<script type="text/javascript"> 
+	function $(obj){ 
+		return document.getElementById(obj); 
+	} 
+	function go(){ 
+		$("bar").style.width = parseInt($("bar").style.width) + 1 + "%"; 
+		$("bar").innerHTML = $("bar").style.width; 
+		if($("bar").style.width == "100%"){ 
+			window.clearInterval(bar); 
+		}
+	} 
+	var bar = window.setInterval("go()",50); 
+	window.onload = function(){ 
+		bar; 
+	} 
+</script> 
+</head> 
+<body> 
+<div class="graph"> 
+	<strong id="bar" style="width:1%;"></strong> 
+</div> 
+</body> 
+</html> 
